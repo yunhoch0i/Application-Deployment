@@ -16,7 +16,7 @@ data "terraform_remote_state" "acm" {
   backend = "s3"
   config = {
     bucket = "cloudfence-prod-state"
-    key    = "prod-team-account/acm/terraform.tfstate"
+    key    = "prod-team-account/deploy/acm/terraform.tfstate"
     region = "ap-northeast-2"
   }
 }
@@ -25,7 +25,7 @@ data "terraform_remote_state" "vpc" {
   backend = "s3"
   config = {
     bucket = "cloudfence-prod-state"
-    key    = "prod-team-account/vpc/terraform.tfstate"
+    key    = "prod-team-account/deploy/vpc/terraform.tfstate"
     region = "ap-northeast-2"
   }
 }

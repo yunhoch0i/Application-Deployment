@@ -16,7 +16,7 @@ data "terraform_remote_state" "alb" {
   backend = "s3"
   config = {
     bucket = "cloudfence-prod-state"
-    key    = "prod-team-account/alb/terraform.tfstate"
+    key    = "prod-team-account/deploy/alb/terraform.tfstate"
     region = "ap-northeast-2"
   }
 }
@@ -25,7 +25,7 @@ data "terraform_remote_state" "iam" {
   backend = "s3"
   config = {
     bucket = "cloudfence-prod-state"
-    key    = "prod-team-account/iam/terraform.tfstate"
+    key    = "prod-team-account/deploy/iam/terraform.tfstate"
     region = "ap-northeast-2"
   }
 }
@@ -34,7 +34,7 @@ data "terraform_remote_state" "ecs" {
   backend = "s3"
   config = {
     bucket = "cloudfence-prod-state"
-    key    = "prod-team-account/ecs/terraform.tfstate"
+    key    = "prod-team-account/deploy/ecs/terraform.tfstate"
     region = "ap-northeast-2"
   }
 }
